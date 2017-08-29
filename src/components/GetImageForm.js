@@ -12,7 +12,8 @@ export default class GetImageForm extends React.Component {
     this.state = {
       camera: '',
       rover: '',
-      num: ''
+      num: '',
+      results: []
     }
   }
 
@@ -34,7 +35,9 @@ export default class GetImageForm extends React.Component {
         return response.json()
       })
       .then((results) => {
-        console.log('results', results.photos);
+        this.setState({
+          results: results.photos
+        });
       });
   }
 
@@ -58,7 +61,7 @@ export default class GetImageForm extends React.Component {
           <input type="number" onChange={this.handleSol} max="2000" min="1000" value={this.state.value}/>
         </form>
         <GetImageButton clickButton={() => this.fetchRoverImage()}/>
-        <ImageDisplay />
+        <ImageDisplay photos={this.state.results}/>
       </div>
     )
   }
