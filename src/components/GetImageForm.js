@@ -82,8 +82,8 @@ export default class GetImageForm extends React.Component {
               <option value="rhaz">RHAZ (Rear Hazard)</option>
               <option value="navcam">NAVCAM (Navigation Cam)</option>
             </select>
-            <label htmlFor="sol">Martian Sol(1000-2000):</label>
-            <input type="number" onChange={this.handleSol} max="2000" min="1000" value={this.state.sol}/>
+            <label htmlFor="sol">Martian Sol:</label>
+            <input type="number" onChange={this.handleSol} value={this.state.sol}/>
           </form>
           <GetImageButton clickButton={() => this.fetchRoverImage()}/>
         </section>

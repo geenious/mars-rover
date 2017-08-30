@@ -36,7 +36,6 @@ export default class GetManifestForm extends React.Component {
         this.setState({
           results: results.photo_manifest
         });
-        console.log('results', results.photo_manifest);
       });
   }
 
@@ -47,7 +46,6 @@ export default class GetManifestForm extends React.Component {
   }
 
   render() {
-    console.log('render', this.state);
     return (
       <div>
         <Header />
