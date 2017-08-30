@@ -1,1 +1,76 @@
+body {
+  background-color: #333;
+}
 
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: blue;
+}
+
+.navbar ul {
+  padding: 30px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  text-transform: uppercase;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #DDD;
+}
+
+.form {
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.form select {
+  margin: 0 10px;
+}
+
+.divbtn {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.btn {
+  padding: 10px;
+  width: 100px;
+}
+
+.photos {
+  width: 90%;
+  margin: 10px auto;
+  background-color: #DDD;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  flex-basis: 30.3333%;
+  margin: 1.5% 1.5%;
+}
+
+.image img {
+  width: 100%;
+  box-shadow: 10px 10px 10px #333;
+  box-sizing: border-box;
+}

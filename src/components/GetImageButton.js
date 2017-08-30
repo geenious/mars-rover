@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function GetImageButton(props) {
   return (
-    <button onClick={props.clickButton}>Get Images</button>
+    <div className='divbtn'>
+      <button className='btn' onClick={props.clickButton}>Get Images</button>
+    </div>
   )
 }
