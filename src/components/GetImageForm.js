@@ -10,11 +10,15 @@ export default class GetImageForm extends React.Component {
     super();
 
     this.state = {
-      camera: '',
-      rover: '',
-      num: '',
+      camera: 'fhaz',
+      rover: 'Curiosity',
+      sol: 0,
       results: []
     }
+
+    this.handleRover = this.handleRover.bind(this);
+    this.handleCamera = this.handleCamera.bind(this);
+    this.handleSol = this.handleSol.bind(this);
   }
 
   fetchRoverImage() {
@@ -28,7 +32,7 @@ export default class GetImageForm extends React.Component {
     let rove = this.state.rover;
     let num = this.state.sol;
 
-    let imageUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=${API_KEY}`;
+    let imageUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rove}/photos?sol=${num}&camera=${cam}&api_key=${API_KEY}`;
 
     fetch(imageUrl)
       .then((response) => {
@@ -41,24 +45,42 @@ export default class GetImageForm extends React.Component {
       });
   }
 
+  handleRover(evt) {
+    this.setState({
+      rover: evt.target.value
+    });
+  }
+
+  handleCamera(evt) {
+    this.setState({
+      camera: evt.target.value
+    });
+  }
+
+  handleSol(evt) {
+    this.setState({
+      sol: evt.target.value
+    });
+  }
+
   render() {
     return (
       <div className='container'>
         <form>
           <label htmlFor="rover">Rover</label>
-          <select onChange={this.handleRover} id="rover" value={this.state.value}>
+          <select onChange={this.handleRover} id="rover" value={this.state.rover}>
             <option value="Curiosity">Curiosity</option>
             <option value="Opportunity">Opportunity</option>
             <option value="Spirit">Spirt</option>
           </select>
           <label htmlFor="camera">Camera Type</label>
-          <select onChange={this.handleCamera} id="rover" value={this.state.value}>
+          <select onChange={this.handleCamera} id="rover" value={this.state.camera}>
             <option value="fhaz">FHAZ (Front Hazard)</option>
             <option value="rhaz">RHAZ (Rear Hazard)</option>
             <option value="navcam">NAVCAM (Navigation Cam)</option>
           </select>
           <label htmlFor="sol">Martian Sol: 1000-2000</label>
-          <input type="number" onChange={this.handleSol} max="2000" min="1000" value={this.state.value}/>
+          <input type="number" onChange={this.handleSol} max="2000" min="1000" value={this.state.sol}/>
         </form>
         <GetImageButton clickButton={() => this.fetchRoverImage()}/>
         <ImageDisplay photos={this.state.results}/>
