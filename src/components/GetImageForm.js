@@ -81,6 +81,7 @@ export default class GetImageForm extends React.Component {
               <option value="fhaz">FHAZ (Front Hazard)</option>
               <option value="rhaz">RHAZ (Rear Hazard)</option>
               <option value="navcam">NAVCAM (Navigation Cam)</option>
+              <option value='pancam'>PANCAM (Panoramic Cam)</option>
             </select>
             <label htmlFor="sol">Martian Sol:</label>
             <input type="number" onChange={this.handleSol} value={this.state.sol}/>
