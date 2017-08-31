@@ -15,7 +15,6 @@ export default class ImageResults extends React.Component {
   }
 
   componentDidMount() {
-    console.log('props', this.props);
 
     let imagesUrl = '';
 
