@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function ManifestDisplay(props) {
 
@@ -33,7 +34,7 @@ export default function ManifestDisplay(props) {
                       <span key={i}> {camera} </span>
                     )
                   })}</td>
-                  <td>{sol.total_photos}</td>
+                  <td><Link to={`/rover/${props.manifest.name}/sol/${sol.sol}`}>{sol.total_photos}</Link></td>
                 </tr>
               )
             })}
