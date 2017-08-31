@@ -5,6 +5,7 @@ const API_KEY = '1xAB5UJLJvfDp6oGygmwpNXIFfIeBUBBCULrrGsv';
 
 export default class ImageResults extends React.Component {
 
+
   constructor() {
     super();
 
@@ -14,7 +15,15 @@ export default class ImageResults extends React.Component {
   }
 
   componentDidMount() {
-    let imagesUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.props.match.params.rover}/photos?sol=${this.props.match.params.sol}&api_key=${API_KEY}`;
+    console.log('props', this.props);
+
+    let imagesUrl = '';
+
+    if (this.props.match.params.camera !== undefined) {
+      imagesUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.props.match.params.rover}/photos?sol=${this.props.match.params.sol}&camera=${this.props.match.params.camera}&api_key=${API_KEY}`;
+    } else {
+      imagesUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/${this.props.match.params.rover}/photos?sol=${this.props.match.params.sol}&api_key=${API_KEY}`;
+    }
 
     fetch(imagesUrl)
       .then((response) => {

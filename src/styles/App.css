@@ -110,3 +110,7 @@ table {
   width: 80%;
   margin: 0 auto;
 }
+
+.camera-link {
+  margin: 0 10px;
+}

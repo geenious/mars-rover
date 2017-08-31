@@ -29,7 +29,6 @@ export default class GetManifestForm extends React.Component {
 
     fetch(roverUrl)
       .then((response) => {
-        console.log('response', response);
         return response.json();
       })
       .then((results) => {

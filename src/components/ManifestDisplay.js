@@ -3,9 +3,6 @@ import {Link} from 'react-router-dom';
 
 export default function ManifestDisplay(props) {
 
-  console.log('props', props.manifest);
-
-
   if (props.manifest === undefined) {
     return (
       <div className='manifest'>
@@ -31,7 +28,9 @@ export default function ManifestDisplay(props) {
                   <td>{sol.sol}</td>
                   <td>{sol.cameras.map((camera, i) => {
                     return (
-                      <span key={i}> {camera} </span>
+                      <span className='camera-link' key={i}>
+                        <Link to={`/rover/${props.manifest.name}/sol/${sol.sol}/camera/${camera}`}>{camera}</Link>
+                      </span>
                     )
                   })}</td>
                   <td><Link to={`/rover/${props.manifest.name}/sol/${sol.sol}`}>{sol.total_photos}</Link></td>

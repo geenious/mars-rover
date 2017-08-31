@@ -13,6 +13,7 @@ ReactDOM.render(
     <BrowserRouter>
       <App>
         <Switch>
+          <Route path='/rover/:rover/sol/:sol/camera/:camera' component={ImageResults} />
           <Route path='/rover/:rover/sol/:sol' component={ImageResults} />
           <Route path='/Search' component={GetImageForm} />
           <Route path='/Manifest' component={GetManifestForm} />
