@@ -10,6 +10,7 @@ import Header from './components/Header.js';
 import ImageResults from './components/ImageResults.js';
 import Landsat from './components/Landsat.js';
 import APOD from './components/APOD.js';
+import EPIC from './components/EPIC.js';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -19,6 +20,7 @@ ReactDOM.render(
           <Route path='/rover/:rover/sol/:sol' component={ImageResults} />
           <Route path='/Search' component={GetImageForm} />
           <Route path='/apod' component={APOD} />
+          <Route path='/epic' component={EPIC} />
           <Route path='/Manifest' component={GetManifestForm} />
           <Route path='/Landsat' component={Landsat} />
           <Route path='/' component={Header} />

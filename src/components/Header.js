@@ -14,6 +14,9 @@ export default class Header extends React.Component {
               <NavLink activeClassName='selected' className='nav-link' to='/APOD'>APOD</NavLink>
             </li>
             <li>
+              <NavLink activeClassName='selected' className='nav-link' to='/epic'>EPIC</NavLink>
+            </li>
+            <li>
               <NavLink activeClassName='selected' className='nav-link' to='/Search'>Search</NavLink>
             </li>
             <li>
