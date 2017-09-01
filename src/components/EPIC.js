@@ -36,7 +36,6 @@ export default class EPIC extends React.Component {
   }
 
   render() {
-    console.log('state', this.state);
     return (
       <div>
         <Header />
