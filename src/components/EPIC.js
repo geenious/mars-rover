@@ -17,7 +17,7 @@ export default class EPIC extends React.Component {
   }
 
   fetchEPIC() {
-    let imgUrl = `https://api.nasa.gov/EPIC/api/natural/date/${this.state.date}?api_key=${API_KEY}`;
+    let imgUrl = `https://api.nasa.gov/EPIC/api/enhanced/date/${this.state.date}?api_key=${API_KEY}`;
     fetch(imgUrl)
       .then((response) => {
         return response.json()
