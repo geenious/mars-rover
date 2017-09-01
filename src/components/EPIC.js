@@ -40,6 +40,7 @@ export default class EPIC extends React.Component {
       <div>
         <Header />
         <section className='container'>
+          <h1>Earth Polychromatic Imaging Camera</h1>
           <form className='form'>
             <label htmlFor='date'>Date:</label>
             <input type='date' onChange={this.handleDate} value={this.state.date} />

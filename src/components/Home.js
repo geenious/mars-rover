@@ -27,7 +27,7 @@ export default class Home extends React.Component {
               </li>
               <li>
                 <h3>Rover Manifest</h3>
-                <p>Choose a rover and see a manifest for every day that rover sent back images. Clickable links will display photos from the selected rover.</p>
+                <p>Choose a Mars rover and see a manifest for every day that rover sent back images. Clickable links will display photos from the selected rover.</p>
               </li>
             </ul>
           </section>
