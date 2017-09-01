@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import GetImageForm from './components/GetImageForm.js';
 import GetManifestForm from './components/GetManifestForm.js';
-import Header from './components/Header.js';
+import Home from './components/Home.js';
 import ImageResults from './components/ImageResults.js';
 import Landsat from './components/Landsat.js';
 import APOD from './components/APOD.js';
@@ -23,7 +23,7 @@ ReactDOM.render(
           <Route path='/epic' component={EPIC} />
           <Route path='/Manifest' component={GetManifestForm} />
           <Route path='/Landsat' component={Landsat} />
-          <Route path='/' component={Header} />
+          <Route path='/' component={Home} />
         </Switch>
       </App>
     </BrowserRouter>

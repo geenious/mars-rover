@@ -42,6 +42,18 @@ body {
   width: 90%;
   margin: 10px auto;
   background-color: #DDD;
+  border-radius: 10px;
+}
+
+.description {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nasa-img {
+  float: right;
+  width: 100px;
 }
 
 .form {

@@ -59,7 +59,7 @@ export default class GetManifestForm extends React.Component {
           </form>
           <GetRoverButton clickButton={() => this.fetchRoverManifest()} />
         </section>
-        <section>
+        <section className='container'>
           <ManifestDisplay manifest={this.state.results} />
         </section>
       </div>
