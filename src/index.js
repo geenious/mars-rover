@@ -8,7 +8,6 @@ import GetImageForm from './components/GetImageForm.js';
 import GetManifestForm from './components/GetManifestForm.js';
 import Home from './components/Home.js';
 import ImageResults from './components/ImageResults.js';
-import Landsat from './components/Landsat.js';
 import APOD from './components/APOD.js';
 import EPIC from './components/EPIC.js';
 
@@ -22,7 +21,6 @@ ReactDOM.render(
           <Route path='/apod' component={APOD} />
           <Route path='/epic' component={EPIC} />
           <Route path='/Manifest' component={GetManifestForm} />
-          <Route path='/Landsat' component={Landsat} />
           <Route path='/' component={Home} />
         </Switch>
       </App>

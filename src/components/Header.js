@@ -22,9 +22,6 @@ export default class Header extends React.Component {
             <li>
               <NavLink activeClassName='selected' className='nav-link' to='/Manifest'>Rover ManiFest</NavLink>
             </li>
-            <li>
-              <NavLink activeClassName='selected' className='nav-link' to='/Landsat'>Landsat</NavLink>
-            </li>
           </ul>
         </div>
       </div>

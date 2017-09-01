@@ -6,6 +6,7 @@ export default function EPICdisplay(props) {
 
   let date = props.date.replace('-', '/');
   let newDate = date.replace('-', '/');
+  console.log('wat', props.date, newDate);
 
   if (props.photos === undefined) {
     return (
@@ -18,7 +19,7 @@ export default function EPICdisplay(props) {
           console.log('image', image.image);
           return (
             <div className='image' key={i}>
-              <img src={`https://api.nasa.gov/EPIC/archive/enhanced/${newDate}/png/${image.image}.png?api_key=${API_KEY}`} alt='Space!'/>
+              <img src={`https://api.nasa.gov/EPIC/archive/natural/${newDate}/png/${image.image}.png?api_key=${API_KEY}`} alt='Space!'/>
             </div>
           )
         })}
